@@ -9,6 +9,9 @@
   "action": {
     "default_title": "Run MSISDN → ICCID Lookup"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -16,6 +19,6 @@
       "run_at": "document_idle"
     }
   ],
-  "permissions": [],
+  "permissions": ["activeTab"],
   "host_permissions": ["<all_urls>"]
 }

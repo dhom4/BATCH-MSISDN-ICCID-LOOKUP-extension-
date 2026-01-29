@@ -1,3 +1,5 @@
+// content.js
+(() => {
 // =========================================
 // USER-FRIENDLY BATCH MSISDN → ICCID LOOKUP
 // (Preserves MSISDN exactly as pasted)
@@ -470,3 +472,4 @@ async function batchMsisdnToIccidLookup(msisdnList) {
 // LAUNCH INPUT DIALOG
 // =========================================
 showMsisdnInputDialog();
+})();

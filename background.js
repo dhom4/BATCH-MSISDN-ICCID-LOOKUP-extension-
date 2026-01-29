@@ -1,6 +1,8 @@
 // background.js
-
 chrome.action.onClicked.addListener((tab) => {
-  // Send a message to the content script in the active tab
-  chrome.tabs.sendMessage(tab.id, { action: "runLookup" });
+  // Inject the content script into the active tab
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ['content.js']
+  });
 });
